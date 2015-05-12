@@ -1,0 +1,13 @@
+<html>
+<body>
+
+  <script src='http://test.mosca.io/mqtt.js'></script>
+  <script>
+    var client = mqtt.connect('ws://test.mosca.io')
+    client.subscribe('mybrowser')
+    client.on('message', function (topic, payload) {
+      alert(topic + ' ' + payload)
+    })
+    client.publish('mybrowser', 'is online')
+  </script>
+</body>
