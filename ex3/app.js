@@ -1,5 +1,5 @@
 var tessel = require('tessel')
-var mqtt = require('mqtt').connect('mqtt://test.mosca.io')
+var mqtt = require('mqtt').connect('mqtt://test.mosca.io?clientId=YOURNAME')
 console.log('starting')
 var led1 = tessel.led[0].output(0)
 
